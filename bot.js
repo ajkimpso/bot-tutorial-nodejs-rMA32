@@ -120,7 +120,7 @@ function respond() {
     postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
     this.res.end();
   } 
-  else if(request.text && botRegexSb.test(request.text)) {
+  else if(request.text && botRegexSnitch.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://www.instagram.com/p/BuRPDA4Bt9e/");
     this.res.end();
