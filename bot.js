@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexTeamStats = /^\/TS/;botRegexRules = /^\/rules/
-      botRegexAd=/^\/advance/;botRegexPlayerStats = /^\/PS/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+      botRegexSummerJam=/^\/SummerJam/;botRegexPlayerStats = /^\/PS/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSnitch = /^\/Snitch/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
       botRegexbitch = /^\/bitch/; botRegexMason = /^\/mason/;
@@ -85,9 +85,9 @@ function respond() {
     postMessage("http://daddyleagues.com/sfl21/stats/team");
     this.res.end();
   } 
-  else if(request.text && botRegexAd.test(request.text)) {
+  else if(request.text && botRegexSummerJam.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.hackcollege.com/wp-content/uploads/2013/02/kno_advance.jpg");
+    postMessage("https://ibb.co/Kw6jrsy");
     this.res.end();
   }
   else if(request.text && botRegexRules.test(request.text)) {
