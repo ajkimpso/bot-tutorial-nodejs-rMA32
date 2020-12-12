@@ -87,7 +87,7 @@ function respond() {
   } 
   else if(request.text && botRegexSummerJam.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://ibb.co/Kw6jrsy");
+    postMessage("https://ibb.co/m9L2SJM");
     this.res.end();
   }
   else if(request.text && botRegexRules.test(request.text)) {
