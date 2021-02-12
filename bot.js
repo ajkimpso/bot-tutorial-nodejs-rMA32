@@ -70,7 +70,6 @@ function respond() {
   } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
     postMessage("https://gamerhuddle.com/league/solid-football-league/schedule"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
@@ -82,7 +81,7 @@ function respond() {
   } 
   else if(request.text && botRegexTeamStats.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/sfl21/stats/team");
+    postMessage("https://gamerhuddle.com/league/solid-football-league/team-stats");
     this.res.end();
   } 
   else if(request.text && botRegexSummerJam.test(request.text)) {
@@ -97,7 +96,7 @@ function respond() {
   } 
   else if(request.text && botRegexPlayerStats.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/sfl21/stats/player");
+    postMessage("https://gamerhuddle.com/league/solid-football-league/passing-stats");
     this.res.end();
   } 
   else if(request.text && botRegexSC.test(request.text)) {
@@ -110,7 +109,7 @@ function respond() {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/sfl21/players?name="+rep+"&position=all&team=all");
+    postMessage("https://gamerhuddle.com/league/solid-football-league/players");
     
     this.res.end();
   }  
